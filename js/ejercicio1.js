@@ -9,8 +9,6 @@ let auto = {
     modelo: 'Cronos',
     color: 'Rojo',
     
-    //metodos
-    
     encender: ()=>{document.write(`<p>El auto está encendido</p>`);},
     apagar: ()=>{document.write(`<p>El auto está apagado</p>`);}
 }

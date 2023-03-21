@@ -13,13 +13,11 @@ let cuenta = {
     titular: 'Alex',
     saldo: 0,
 
-    ingresar: function(){
-        let cantidadDinero = parseFloat(prompt('Ingrese el monto de dinero'));
+    ingresar: function(cantidadDinero){
         this.saldo += cantidadDinero;
         alert('Operación exitosa');
     },
-    extraer: function(){
-        let cantidadExtraccion = parseFloat(prompt('Ingrese el monto a extraer'));
+    extraer: function(cantidadExtraccion){
         if (this.saldo>=cantidadExtraccion){
             this.saldo -= cantidadExtraccion;
             alert('Operación exitosa');
@@ -38,12 +36,14 @@ do{
 let opcionSeleccionada = parseInt(prompt('Menu Principal \n\n Seleccione el número de la operación que desea realizar \n\n 1- Agregar dinero \n 2- Extraer  dinero \n 3-Estado de cuenta'))
  
 switch(opcionSeleccionada){
-    case 1: 
-        cuenta.ingresar();
+    case 1:
+        let dineroIngresado = parseFloat(prompt('Ingrese el monto de dinero'));
+        cuenta.ingresar(dineroIngresado);
         // cuenta.informar();
         break;
     case 2:
-        cuenta.extraer();
+        let dineroExtraido = parseFloat(prompt('Ingrese el monto a extraer'));
+        cuenta.extraer(dineroExtraido);
         // cuenta.informar();
         break;
     case 3:
