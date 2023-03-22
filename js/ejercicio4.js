@@ -19,24 +19,24 @@ class Producto {
         return this.#codigo;
     }
 
-    set codigo(newAlto) {
-        this.#codigo = newAlto;
+    set codigo(newCodigo) {
+        this.#codigo = newCodigo;
     }
 
     get nombre() {
         return this.#nombre;
     }
 
-    set nombre(newAncho) {
-        this.#nombre = newAncho;
+    set nombre(newNombre) {
+        this.#nombre = newNombre;
      }
 
      get precio() {
         return this.#precio;
     }
 
-    set precio(newAncho) {
-        this.#precio = newAncho;
+    set precio(newPrecio) {
+        this.#precio = newPrecio;
      }
   
     imprimirDatos() {
