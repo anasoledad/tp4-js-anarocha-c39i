@@ -11,15 +11,76 @@ mostrarDatos: devuelve toda la información del objeto.
 generaDNI(): genera un número aleatorio de 8 cifras.*/
 
 class Persona {
+    #nombre;
+    #edad;
+    #dni;
+    #sexo;
+    #peso;
+    #altura;
+    #anioNacimiento;
     constructor(nombre, edad, dni, sexo, peso, altura, anioNacimiento){
-        this.nombre = nombre;
-        this.edad = edad;
-        this.dni = dni;
-        this.sexo = sexo;
-        this.peso = peso;
-        this.altura = altura;
-        this.anioNacimiento = anioNacimiento;
+        this.#nombre = nombre;
+        this.#edad = edad;
+        this.#dni = dni;
+        this.#sexo = sexo;
+        this.#peso = peso;
+        this.#altura = altura;
+        this.#anioNacimiento = anioNacimiento;
     }
+
+    get nombre() {
+        return this.#nombre;
+    }
+
+    set nombre(newNombre) {
+        this.#nombre = newNombre;
+     }
+    get edad() {
+        return this.#edad;
+    }
+
+    set edad(newEdad) {
+        this.#edad = newEdad;
+    }
+
+     get dni() {
+        return this.#dni;
+    }
+
+    set dni(newDni) {
+        this.#dni = newDni;
+     }
+     get sexo() {
+        return this.#sexo;
+    }
+
+    set sexo(newSexo) {
+        this.#sexo = newSexo;
+     }
+
+     get peso() {
+        return this.#peso;
+    }
+
+    set peso(newPeso) {
+        this.#peso = newPeso;
+     }
+
+     get altura() {
+        return this.#altura;
+    }
+
+    set altura(newAltura) {
+        this.#altura = newAltura;
+     }
+     get anioNacimiento() {
+        return this.#anioNacimiento;
+    }
+
+    set anioNacimiento(newAnioNacimiento) {
+        this.#anioNacimiento = newAnioNacimiento;
+     }
+
     mostrarGeneración(){
         switch(true){
             case this.anioNacimiento>=1994 && this.anioNacimiento<=2010:
@@ -74,13 +135,13 @@ class Persona {
 
 }
 
-let persona1 = new Persona ('Sofia', 14, '', 'M', 50, 1.55, 2008);
+let persona1 = new Persona ('Valentina', 14, '', 'M', 50, 1.55, 2008);
 persona1.dni= persona1.generarDNI();
 persona1.mostrarDatos();
 persona1.mostrarGeneración();
 persona1.esMayorDeEdad();
 
-let persona2 = new Persona ('Irma', 61, '', 'M', 50,1.55, 1961);
+let persona2 = new Persona ('Irma', 61, '', 'M', 50, 1.55, 1961);
 persona2.dni= persona2.generarDNI();
 persona2.mostrarDatos();
 persona2.mostrarGeneración();
